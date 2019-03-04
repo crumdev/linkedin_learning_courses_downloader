@@ -28,5 +28,23 @@ python llcd.py
 ```
 The courses will be saved in the `out` folder.
 
+For Docker Users:
+
+*Replace {text} with your own values*
+
+- cd to the directory you cloned the scripts into then run the following command to build your docker image using the provided docker file
+
+```
+docker build -t {imageName} .
+```
+
+- Once the image has been built, edit the config file as explained above and run your docker container
+
+```
+docker run -it -v /absolute/path/to/llcd_folder:/usr/src/llcd {imageName}
+```
+
+- Sit back and watch the videos download to your host from the docker container.
+
 ### Demo
 [![asciicast](https://asciinema.org/a/143894.png)](https://asciinema.org/a/143894)
